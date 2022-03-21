@@ -1,11 +1,8 @@
-resilience4j:
-    ratelimiter:
-        configs:
-            default:
-                limitForPeriod: 5
-                limitRefreshPeriod: 1s
-                timeoutDuration: 0
-        instances:
-            currentExchange:
-                baseConfig: default
-                
+resilience4j.ratelimiter:
+  instances:
+    currentExchange:
+      timeoutDuration: 0 
+      limitRefreshPeriod: 1s
+      limitForPeriod: 5
+
+management.health.circuitbreakers.enabled: true
