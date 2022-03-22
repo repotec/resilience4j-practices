@@ -1,4 +1,4 @@
-package com.resilience4j.demo.controller;
+package com.resilience4j.ratelimiter.controller;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -13,12 +13,12 @@ import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 public class CurrencyExchangeController {
 	
 	@GetMapping("/curreny-exchange")
-	@RateLimiter(name = "currentExchange", fallbackMethod = "currentExchangeFullback")
+	@RateLimiter(name = "currenyExchange", fallbackMethod = "currenyExchangeRatelimiterFullback")
 	public ResponseEntity<String> currentExchange() {
 		return ResponseEntity.ok().body("1.34");
 	}
 	
-	public ResponseEntity currentExchangeFullback(RequestNotPermitted exception) {
+	public ResponseEntity currenyExchangeRatelimiterFullback(RequestNotPermitted exception) {
 		HttpHeaders customHttpHeaders = new HttpHeaders();
 		customHttpHeaders.set("Retry-After", "1");
 		

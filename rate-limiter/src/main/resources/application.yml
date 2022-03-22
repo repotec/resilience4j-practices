@@ -1,8 +1,7 @@
-resilience4j.ratelimiter:
-  instances:
-    currentExchange:
-      timeoutDuration: 0 
-      limitRefreshPeriod: 1s
-      limitForPeriod: 5
-
-management.health.circuitbreakers.enabled: true
+resilience4j:
+  ratelimiter:
+    instances:
+      currenyExchange:
+        timeoutDuration: 0 
+        limitRefreshPeriod: 1s
+        limitForPeriod: 5

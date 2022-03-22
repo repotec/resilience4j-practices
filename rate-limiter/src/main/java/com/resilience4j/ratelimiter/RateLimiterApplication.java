@@ -1,4 +1,4 @@
-package com.resilience4j.demo;
+package com.resilience4j.ratelimiter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -55,5 +55,6 @@
 
 	<modules>
 		<module>rate-limiter</module>
+		<module>bulkhead</module>
 	</modules>
 </project>

@@ -1,0 +1,13 @@
+resilience4j:
+  bulkhead:
+    instances:
+      currenyExchange:
+        max-concurrent-calls: 5
+        max-wait-duration: 0ms
+     
+#  thread-pool-bulkhead:
+#    instances:
+#      currenyExchange:
+#        maxThreadPoolSize: 1
+#        coreThreadPoolSize: 1
+#        queueCapacity: 1
